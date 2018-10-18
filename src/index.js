@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import dataReducer from './reducers/dataState';
 import App from './containers/App';
 
+import 'antd-mobile/dist/antd-mobile.css';
+
 const store = createStore(dataReducer);
 
 ReactDOM.render(
