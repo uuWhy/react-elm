@@ -1,0 +1,11 @@
+.my_unlogin{
+    display: flex;
+    background-image: linear-gradient(90deg,#0af,#0085ff);
+    color: #fff;
+    align-items: center;
+    padding: .666667rem .4rem;
+}
+.my_tx{
+    width: 30%;
+
+}
