@@ -6,21 +6,11 @@ class Header extends Component{
     render(){
         return(
             <div>
-                {/*<NavBar*/}
-                    {/*mode='light'*/}
-                    {/*icon={<Icon type={"left"}/>}*/}
-                    {/*onLeftClick = {()=>console.log("返回上一级")}*/}
-                {/*>*/}
-                    {/*{this.props.title}*/}
-                {/*</NavBar>*/}
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" />}
                     onLeftClick={() => console.log('onLeftClick')}
-                    rightContent={[
-                        <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                        <Icon key="1" type="ellipsis" />,
-                    ]}
+                    style={{backgroundImage:"linear-gradient(90deg, #0af, #0085ff)"}}
                 >{this.props.title}</NavBar>
 
             </div>
