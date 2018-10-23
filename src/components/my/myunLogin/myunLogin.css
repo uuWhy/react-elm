@@ -3,9 +3,34 @@
     background-image: linear-gradient(90deg,#0af,#0085ff);
     color: #fff;
     align-items: center;
-    padding: .666667rem .4rem;
+    padding: 20px 20px;
 }
 .my_tx{
-    width: 30%;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.my_unlogin_sub{
+    width: auto;
+    height: auto;
+    padding-left: 15px;
+    flex-grow:1;
+}
+.my_unlogin_sub_title{
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+.my_unlogin_sub_more{
+    margin: 0;
+    line-height: 1.6;
 
+}
+.my_unlogin_sub_more svg{
+    width: 8px;
+    height: 12px;
+}
+.my_unlogin_go{
+    width: 15px;
 }
