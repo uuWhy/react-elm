@@ -11,5 +11,14 @@ export default class StorageUtils {
         return null;
     }
 
-    static
+    static set(key,value){
+        window.localStorage.setItem(prefix+key,JSON.stringify(value));
+        return true;
+    }
+
+    static remove(key){
+        window.localStorage.removeItem(prefix+key);
+        return true;
+    }
+
 }

@@ -21,11 +21,10 @@ class App extends Component{
                     <Route path='/find' component={Find}/>
                     <Route path='/my' component={My}/>
                     <Route path='/order' component={Order}/>
-                    <switch>
+                    <Switch>
                         <Route path='/login' component={Login}/>
-                        <Footer/>
-                    </switch>
-
+                        <Route  component={Footer}/>
+                    </Switch>
                 </div>
             </BrowserRouter>
         )
