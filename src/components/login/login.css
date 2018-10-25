@@ -14,3 +14,86 @@
     height: 100%;
     background: #fff;
 }
+.login .login_logo{
+    width: 160px;
+    height: auto;
+}
+.login .login_logo svg{
+    width: 100%;
+}
+.login_method{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.login_method a{
+    color: #000;
+}
+.login_method .login_method_cur{
+    color: #2395ff;
+    font-weight: 700;
+    border-bottom: 2PX solid #2395ff;
+}
+.login form{
+    width: 300px;
+}
+
+.login .login_sec{
+    position: relative;
+    margin-top: 16px;
+    height: 48px;
+    font-size: 14px;
+    background: #fff;
+}
+.login .login_sec input{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    padding-left: 10PX;
+    border: 1PX solid #ddd;
+    border-radius: 4PX;
+    color: #333;
+    outline: none;
+}
+.login .login_sec input:focus{
+    border-color: #0089dc;
+}
+.login .get_yzm{
+    padding: 0;
+    border-radius: 6PX;
+    color: #2395ff;
+    background: transparent;
+    text-align: center;
+    font-size: 14PX;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    outline: 0;
+    border: none;
+    transform: translateY(-50%);
+}
+.login .login_tips{
+    margin-top: 12PX;
+    color: #999;
+    font-size: 14PX;
+    line-height: 20PX;
+}
+.login .login_tips a{
+    color: #2395ff;
+}
+.login .login_now{
+    display: block;
+    width: 100%;
+    height: 42PX;
+    margin-top: 30PX;
+    border-radius: 4PX;
+    background: #4cd96f;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16PX;
+    line-height: 42PX;
+    outline: none;
+    border:none;
+}

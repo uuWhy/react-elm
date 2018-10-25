@@ -20,9 +20,19 @@ class Login extends Component{
             wran:''
         }
     }
+    /* 登录 */
+    handleLogin(event){
+        event.stopPropagation();
 
-    handleLogin(){}
+    }
+    handleChangePass(){
+        console.log("12")
+    }
 
+    /* 手机号 */
+    handleChangeName(event){
+        event.stopPropagation();
+    }
     /* 本地存储 */
     _saveLocal(obj){
         try{
@@ -56,16 +66,18 @@ class Login extends Component{
                     </div>
                     <form>
                         <section className='login_sec'>
-                           <input type='tel' className='' placeholder='手机号' />
+                           <input type='tel' className='' placeholder='手机号' onChange={this.handleChangeName.bind(this)} value={this.state.userName}/>
+                            <button ref={(but)=>{this.button=but}}  disabled={this.state.getYz} className='get_yzm'>获取验证码</button>
                         </section>
                         <section className='login_sec'>
-
+                            <input type="text" maxLength='8' placeholder='验证码' onChange={this.handleChangePass.bind(this)} value={this.state.passWord}/>
                         </section>
                         <section className='login_sec login_tips'>
-
+                            温馨提示：未注册饿了么帐号的手机号，登录时将自动注册，且代表您已同意
+                            <a href="//h5.ele.me/service/agreement/" target="_blank" rel="nofollow me noopener noreferrer">《用户服务协议》</a>
                         </section>
                         <button className='login_now' onClick={this.handleLogin.bind(this)}>
-
+                            登录
                         </button>
                     </form>
                 </div>
