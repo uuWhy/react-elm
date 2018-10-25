@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import { connect } from 'react-redux';
 import './login.css';
 import {login} from "../../reducers/dataState";
-import {StorageUtils} from '../../utils/index'
+import { StorageUtils, TypeUtils} from '../../utils/index'
 
 class Login extends Component{
 
@@ -25,14 +25,34 @@ class Login extends Component{
         event.stopPropagation();
 
     }
-    handleChangePass(){
-        console.log("12")
+    /* 验证码输入 */
+    handleChangePass(event){
+        this.setState({
+            passWord:event.target.value
+        })
     }
 
-    /* 手机号 */
+    /* 手机号输入 */
     handleChangeName(event){
         event.stopPropagation();
+        console.log(event.target.value)
+        console.log(TypeUtils.checkStr(event.target.value,'phone'))
+        if(TypeUtils.checkStr(event.target.value,'phone')){
+            this.setState({
+                getYz:false,
+                submit:true
+            })
+        }else {
+            this.setState({
+                getYz:true,
+                submit:false
+            })
+        }
+        this.setState({
+            userName:event.target.value,
+        })
     }
+
     /* 本地存储 */
     _saveLocal(obj){
         try{
