@@ -20,10 +20,55 @@ class Login extends Component{
             wran:''
         }
     }
+    timer:null;
+    _animate(){
+        if(this.timer){clearTimeout(this.timer)}
+        this.timer=setTimeout(()=>{
+            this.setState({
+                iswran:false
+            })
+        },2000)
+    }
     /* 登录 */
     handleLogin(event){
         event.stopPropagation();
-
+        if(!this.state.submit){
+            this.setState({
+                wran:'请输入正确的手机号！',
+                iswran:true
+            })
+            this._animate()
+            return;
+        }else if(this.state.passWord.length===0){
+            this.setState({
+                wran:'请输入验证码！',
+                iswran:true
+            })
+            this._animate()
+            return;
+        }else if(this.props.data.isLogin){
+            //判断是否登录
+            this.setState({
+                wran:'已经登录！',
+                iswran:true
+            })
+            this._animate()
+            return;
+        }else if(this.props.onLogin){
+            let name = Math.floor(Math.random()*654187)+651;
+            this.props.onLogin({
+                isLogin:true,
+                name:name,
+                phone:this.state.userName
+            })
+            StorageUtils.set("islogin",{
+                isLogin:true,
+                name:name,
+                phone:this.state.userName
+            })
+            /*为了匹配订单页和我的页*/
+            this.props.history.goBack();
+        }
     }
     /* 验证码输入 */
     handleChangePass(event){
@@ -35,8 +80,6 @@ class Login extends Component{
     /* 手机号输入 */
     handleChangeName(event){
         event.stopPropagation();
-        console.log(event.target.value)
-        console.log(TypeUtils.checkStr(event.target.value,'phone'))
         if(TypeUtils.checkStr(event.target.value,'phone')){
             this.setState({
                 getYz:false,
@@ -96,10 +139,13 @@ class Login extends Component{
                             温馨提示：未注册饿了么帐号的手机号，登录时将自动注册，且代表您已同意
                             <a href="//h5.ele.me/service/agreement/" target="_blank" rel="nofollow me noopener noreferrer">《用户服务协议》</a>
                         </section>
-                        <button className='login_now' onClick={this.handleLogin.bind(this)}>
+                        <div className='login_now' onClick={this.handleLogin.bind(this)}>
                             登录
-                        </button>
+                        </div>
                     </form>
+                </div>
+                <div className={`login_wran ${this.state.iswran?"":"out"}`}>
+                    {this.state.wran}
                 </div>
             </div>
         )
