@@ -25,7 +25,6 @@
 .my_unlogin_sub_more{
     margin: 0;
     line-height: 1.6;
-
 }
 .my_unlogin_sub_more svg{
     width: 8px;
@@ -37,11 +36,18 @@
 .unlogin_activity{
     display: flex;
     width: 100%;
+    background: #fff;
 }
 .unlogin_activity .youhui_cont{
     width: 50%;
     text-align: center;
+    display: block;
+    padding: 1.2rem 0;
 }
 .unlogin_activity .youhui_cont svg{
     width: 30px;
+}
+.unlogin_activity_word{
+    font-size: 0.8rem;
+    padding: 0.5rem 0 0 0;
 }

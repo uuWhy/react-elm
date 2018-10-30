@@ -26,6 +26,17 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <script>
+        var fontSizeInit = function() {
+            var doc = document.documentElement,
+                cli   = doc.clientWidth;
+            cli&&(cli/=320,2<cli&&(cli=2),doc.style.fontSize=16*cli+"px");
+        }
+        fontSizeInit();
+        window.addEventListener('resize', function() {
+            fontSizeInit();
+        });
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
