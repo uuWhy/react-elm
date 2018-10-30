@@ -34,3 +34,14 @@
 .my_unlogin_go{
     width: 15px;
 }
+.unlogin_activity{
+    display: flex;
+    width: 100%;
+}
+.unlogin_activity .youhui_cont{
+    width: 50%;
+    text-align: center;
+}
+.unlogin_activity .youhui_cont svg{
+    width: 30px;
+}

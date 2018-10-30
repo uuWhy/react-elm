@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import dataReducer from './reducers/dataState';
 import App from './containers/App';
+import './reset.css';
 
 import 'antd-mobile/dist/antd-mobile.css';
 
