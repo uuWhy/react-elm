@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { weather, address} from '../../data/data';
 
+import Header from '../../components/index/header/header';
 
 class Headersmart extends Component{
     constructor(){
@@ -24,7 +25,9 @@ class Headersmart extends Component{
 
     render(){
         return(
-            <div>header</div>
+            <div>
+                <Header data={this.state}/>
+            </div>
         )
     }
 }
