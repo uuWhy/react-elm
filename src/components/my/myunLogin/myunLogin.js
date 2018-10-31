@@ -1,8 +1,15 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import { List, WhiteSpace } from 'antd-mobile';
 import './myunLogin.css';
+import address from '../../../assets/my/my_address.svg';
+import app from '../../../assets/my/my_app.svg';
+import integral from '../../../assets/my/my_integral.svg';
+import server from '../../../assets/my/my_server.svg';
+
+const Item = List.Item;
+const Brief = List.Brief;
 
 /* 登陆后 */
 class AfterLogin extends Component{
@@ -94,8 +101,53 @@ class MyunLogin extends Component {
                         </p>
                         <p className='unlogin_activity_word'>优惠</p>
                     </div>
-
+                    <div className='jifen_cont'>
+                        <p>
+                            {this.state.isLogin? <span className='youhui_num'  style={{ color: 'rgb(106, 194, 11)'}}>{Math.ceil(Math.random()*10)}<span className='youhui_dw'>个</span></span>:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" version="1.1" fill="#6ac20b"><path fillRule="evenodd" d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm-9 26.8v3.3c0 1.2 3.6 2.9 9 2.9s9-1.7 9-2.9v-3.3c-2.1 1.3-5.6 1.9-9 1.9-3.4.1-6.9-.6-9-1.9zM24 15c-5.8 0-9 1.8-9 2.8 0 1 3.2 2.8 9 2.8s9-1.8 9-2.8c0-1-3.2-2.8-9-2.8zm-9 5.6V24c0 .9 3.2 2.8 9 2.8s9-1.8 9-2.8v-3.4c-2.1 1.3-5.6 1.9-9 1.9-3.4 0-6.9-.6-9-1.9zM35 24v6.1c0 3.2-5.5 4.9-11 4.9s-11-1.7-11-4.9V17.8c0-3.1 5.5-4.8 11-4.8s11 1.6 11 4.8V24z"/></svg>}
+                        </p>
+                        <p className='unlogin_activity_word'>积分</p>
+                    </div>
                 </div>
+                <WhiteSpace size='xl'/>
+                <List>
+                    <Item
+                        onClick={()=>{}}
+                        arrow="horizontal"
+                        thumb={address}
+                    >
+                        我的地址
+                    </Item>
+                </List>
+                <WhiteSpace size='lg'/>
+                <List>
+                    <Item
+                        onClick={()=>{}}
+                        arrow="horizontal"
+                        thumb={integral}
+                    >
+                        积分商城
+                    </Item>
+                </List>
+                <WhiteSpace size='lg'/>
+                <List>
+                    <Item
+                        onClick={()=>{}}
+                        arrow="horizontal"
+                        thumb={server}
+                    >
+                        服务中心
+                    </Item>
+                </List>
+                <WhiteSpace size='lg'/>
+                <List>
+                    <Item
+                        onClick={()=>{}}
+                        arrow="horizontal"
+                        thumb={app}
+                    >
+                        下载app
+                    </Item>
+                </List>
             </div>
         )
     }
