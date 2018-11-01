@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import './header.css';
 
 class Header extends Component{
     constructor(){
@@ -23,7 +24,15 @@ class Header extends Component{
 
     render(){
         return(
-            <div>Header</div>
+            <header className='index_header'>
+                <div className='header_title'>
+                    <div className='index-address' >
+                        <span className='address_icon'></span>
+                        <span className="index-word">{this.state.address}</span>
+                        <i className='sj'></i>
+                    </div>
+                </div>
+            </header>
         )
     }
 }
