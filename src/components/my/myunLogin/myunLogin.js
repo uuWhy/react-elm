@@ -9,7 +9,7 @@ import integral from '../../../assets/my/my_integral.svg';
 import server from '../../../assets/my/my_server.svg';
 
 const Item = List.Item;
-const Brief = List.Brief;
+
 
 /* 登陆后 */
 class AfterLogin extends Component{

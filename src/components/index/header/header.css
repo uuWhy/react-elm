@@ -1,5 +1,5 @@
 .index_header{
-    padding: 20px 20px 0;
+    padding: 15px 20px 0;
     color: #fff;
     background-image: linear-gradient(90deg,#0af,#0085ff);
 }
@@ -26,6 +26,7 @@
     border-width: 4px;
     border-color: transparent;
     border-top-color: #fff;
+    margin-top: 3px;
 }
 
 .index-word{
@@ -43,14 +44,14 @@
 
 }
 .weather .weather_today{
-    font-size: 24px;
+    font-size: 14px;
     transform: scale(0.8);
 }
 .weather .weather_num{
-    font-size: 28px;
+    font-size: 18px;
 }
 .weather .weather-icon{
     margin-left: 5px;
-    width: 55px;
-    height: 55px;
+    width: 30px;
+    height: 30px;
 }

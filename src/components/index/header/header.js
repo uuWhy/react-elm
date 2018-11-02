@@ -31,6 +31,13 @@ class Header extends Component{
                         <span className="index-word">{this.state.address}</span>
                         <i className='sj'></i>
                     </div>
+                    <div className='weather'>
+                        <div>
+                            <h2 className='weather_num'>{this.state.temperature}</h2>
+                            <p className='weather_today'>{this.state.description}</p>
+                        </div>
+                        <img alt="天气图标" className="weather-icon" src="//fuss10.elemecdn.com/9/b9/c8e482821be2080edcffbb3a8d376png.png?imageMogr/format/webp/thumbnail/!69x69r/gravity/Center/crop/69x69/"/>
+                    </div>
                 </div>
             </header>
         )
